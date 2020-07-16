@@ -19,7 +19,7 @@ def pred():
     # file.save(('data.jpg'))
     model = load_model('facefeatures_new_model.h5')
     from PIL import Image
-    face = Image.open("data.jpg")
+    face = Image.open("wow.jpg")
     face = cv2.resize(np.float32(face), (224, 224))
     im = Image.fromarray(face, 'RGB')
     # Resizing into 128x128 because we trained the model with this image size.
