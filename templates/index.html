@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Em</title>
+    <title>Kartik's App</title>
     <style>
         .bd1{
             border-radius: 25px;
@@ -13,13 +13,13 @@
     </style>
 </head>
 <body>
-    <form action="{{ url_for('sum')}}"method="post">
+    <form action="{{ url_for('pred')}}" method="post" enctype=multipart/form-data>
    <div class="bd1">
-       Enter Num1: <input type="text" name="num1" id="">
-       Enter Num2: <input type="text" name="num2" id="">
-       <input type="submit" value="Add!!" >
+       <input type="file" name=file>
+		<button type="submit">Upload file</button>
+    
    </div>
-   Result is :{{res}}
+   Mask is : {{res}}
 </form>
 </body>
 </html>
