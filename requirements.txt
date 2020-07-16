@@ -11,3 +11,4 @@ matplotlib>=1.4.3
 pandas>=0.19
 opencv-python==4.2.0.34
 Keras==2.4.3
+Pillow==7.1.2
