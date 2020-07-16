@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 app=Flask(__name__)
 UPLOAD_FOLDER = '/media/'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+#app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
