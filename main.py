@@ -3,6 +3,7 @@ from werkzeug.utils import secure_filename
 from keras.models import load_model
 import cv2
 import numpy as np
+from PIL import Image
 app=Flask(__name__)
 UPLOAD_FOLDER = '/media/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -18,7 +19,7 @@ def pred():
     filename = secure_filename(file.filename)
     # file.save(('data.jpg'))
     model = load_model('facefeatures_new_model.h5')
-    from PIL import Image
+    
     #face = Image.open("wow.jpg")
     #face = cv2.resize(np.float32(face), (224, 224))
     #im = Image.fromarray(face, 'RGB')
