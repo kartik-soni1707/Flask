@@ -2,7 +2,6 @@ from flask import Flask,render_template,request
 from werkzeug.utils import secure_filename
 from keras.models import load_model
 import cv2
-import os
 import numpy as np
 app=Flask(__name__)
 UPLOAD_FOLDER = '/media/'
