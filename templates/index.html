@@ -1,25 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik's App</title>
-    <style>
-        .bd1{
-            border-radius: 25px;
-            background-color: aqua;
-            border:5px solid yellow;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
 </head>
+
 <body>
-    <form action="{{ url_for('pred')}}" method="post" enctype=multipart/form-data>
-   <div class="bd1">
-       <input type="file" name=file>
-		<button type="submit">Upload file</button>
-    
-   </div>
-   Mask is : {{res}}
-</form>
+ <div class="login">
+	<h1>Predict Salary Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="experience" placeholder="Gender" required="required" />
+        <input type="text" name="test_score" placeholder="Married" required="required" />
+    <input type="text" name="interview_score" placeholder="Dependents" required="required" />
+    <input type="text" name="g" placeholder="Education" required="required" />
+		<input type="text" name="f" placeholder="Self-Employed" required="required" />
+		<input type="text" name="e" placeholder="Applicant Income" required="required" />
+		<input type="text" name="d" placeholder="Co-Applicant Income" required="required" />
+		<input type="text" name="c" placeholder="Loan Term" required="required" />
+		<input type="text" name="b" placeholder="Credit History" required="required" />
+		<input type="text" name="a" placeholder="Property" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
 </body>
 </html>
