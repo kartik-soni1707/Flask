@@ -8,7 +8,7 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
-def home():
+def home(var1,var2):
     return render_template('index.html')
 
 @app.route('/predict',methods=['POST'])
