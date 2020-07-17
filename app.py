@@ -38,9 +38,9 @@ def predict():
     value=array(value, dtype=np.float64)
     res=classifier.predict([value,])
 
-    output  = res
+    output  = int(res[0][0])
 
-    return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='Loan Eligible $ {}'.format(output))
 
 
 if __name__ == "__main__":

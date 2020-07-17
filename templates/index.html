@@ -3,18 +3,45 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <title>Loan Predicor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+
   
+<style>
+    body{
+      margin-top:0px;
+
+    }
+    h1{
+      box-sizing: border-box;
+      margin-top: 0px;
+      height: 66px;
+      padding-top:10px;
+      text-align: center;
+      background-color: aqua;
+      color:navy;
+      font-family: 'Sawarabi Gothic', sans-serif;
+      border-bottom-right-radius:55px ;
+      border-bottom-left-radius:55px ;
+    }
+    .login{
+      
+      background-image: linear-gradient(-90deg, red, yellow);
+
+      height:500px;
+      width:600px;
+      margin: auto;
+      border-bottom-right-radius:35px ;
+      border-bottom-left-radius:35px ;
+
+    }
+  </style>
 </head>
 
 <body>
  <div class="login">
-	<h1>Predict Salary Analysis</h1>
-
+	<h1>Predict Your Loan</h1>
+    <div class="content">
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="experience" placeholder="Gender" required="required" />
@@ -29,7 +56,7 @@
 		<input type="text" name="a" placeholder="Property" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-
+  </div>
    <br>
    <br>
    {{ prediction_text }}
