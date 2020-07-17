@@ -5,7 +5,7 @@ from numpy import array
 
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+
 
 @app.route('/')
 def home(var1,var2):
