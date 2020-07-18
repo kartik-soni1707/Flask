@@ -29,7 +29,7 @@ def predict():
 
     value[0]=(value[0].lower()=='male')
     value[1]=(value[1].lower()=='yes')    
-    value[3]=(value[3].lower()=='not graduate')
+    value[3]=(value[3].lower()=='not grad')
     value[4]=(value[4].lower()=='yes')
     if(value[-1].lower()=='urban'):
         value[-1]=2

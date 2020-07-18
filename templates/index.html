@@ -63,22 +63,22 @@ background: linear-gradient(90deg, rgba(213,174,238,1) 0%, rgba(148,233,193,1) 1
     }
     .box1{
       margin-top: 10px;
-      margin-left: 100px;
+      margin-left: 0x;
       margin-bottom: 10px;
     }
     .box2{
       margin-top: 10px;
-      margin-left: 100px;
+      margin-left: 00px;
       margin-bottom: 10px;
     }
     .box3{
       margin-top: 10px;
-      margin-left: 100px;
+      margin-left: 00px;
       margin-bottom: 10px;
     }
     .box4{
       margin-top: 10px;
-      margin-left: 100px;
+      margin-left: 00px;
       margin-bottom: 20px;
     }
     input{
@@ -109,7 +109,9 @@ background: linear-gradient(90deg, rgba(213,174,238,1) 0%, rgba(148,233,193,1) 1
       font-size: 25px;
       text-align: center;
     }
-    
+    .inpt{
+      width:150px;
+    }
     
 
   </style>
@@ -128,17 +130,21 @@ background: linear-gradient(90deg, rgba(213,174,238,1) 0%, rgba(148,233,193,1) 1
      <label for="no">No</label><br>    
     </div>
      <div class="box1">
-    <input type="text" name="interview_score" placeholder="Dependents" required="required" />
-    <input type="text" name="g" placeholder="Education" required="required" /></div> 
+      Dependents : <input type="text" class="inpt" name="interview_score" placeholder="0,1,2 or 3+" required="required" />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      Education : <input type="text" class="inpt" name="g" placeholder="Grad/NotGrad" required="required" /></div> 
     <div class="box2">
-    <input type="text" name="f" placeholder="Self-Employed" required="required" />
-    <input type="text" name="e" placeholder="Applicant Income" required="required" /></div>
+      Self-Employed : <input type="text" name="f" class="inpt" placeholder="Yes Or No" required="required" />
+      Applicant Income : <input type="text" name="e" class="inpt" placeholder=" $" required="required" /></div>
     <div class="box3">
-		<input type="text" name="d" placeholder="Co-Applicant Income" required="required" />
-		<input type="text" name="c" placeholder="Loan Term" required="required" /></div>
+      Co-Applicant Income : <input type="text" name="d" class="inpt" placeholder="$" required="required" />
+      Loan Term : <input type="text" name="c" class="inpt" placeholder="Years X 12" required="required" /></div>
     <div class="box3">
-    <input type="text" name="b" placeholder="Credit History" required="required" />
-		<input type="text" name="a" placeholder="Property" required="required" /></div>
+      Credit History : <input type="text" name="b" class="inpt" placeholder="0 or 1" required="required" />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      Property : <input type="text" name="a" class="inpt" placeholder="Rural or Urban" required="required" /></div>
                
         <button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Predict</button>
     </form>
