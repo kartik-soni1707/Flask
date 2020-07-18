@@ -97,7 +97,7 @@ background: linear-gradient(90deg, rgba(213,174,238,1) 0%, rgba(148,233,193,1) 1
       border-radius: 50px;
     }
     *:focus { outline: 0 !important;
-    border: black 5px solid;
+    
     }
     .ans{
       width: 500px;
@@ -111,6 +111,12 @@ background: linear-gradient(90deg, rgba(213,174,238,1) 0%, rgba(148,233,193,1) 1
     }
     .inpt{
       width:150px;
+    }
+    select{
+      font-size: 15px;
+      padding: 5px;
+      border-radius: 30px;
+      text-align: center;
     }
     
 
@@ -130,22 +136,56 @@ background: linear-gradient(90deg, rgba(213,174,238,1) 0%, rgba(148,233,193,1) 1
      <label for="no">No</label><br>    
     </div>
      <div class="box1">
-      Dependents : <input type="text" class="inpt" name="interview_score" placeholder="0,1,2 or 3+" required="required" />
+      <label for="cars">Dependents : </label>
+  <select name="cars" id="cars">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3+</option>
+  </select>
+  
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      Education : <input type="text" class="inpt" name="g" placeholder="Grad/NotGrad" required="required" /></div> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="Edu">Education : </label>
+  <select name="edu" id="edu">
+    <option value="grad">Graduated</option>
+    <option value="not grad">Not Graduated</option>
+    
+  </select>
     <div class="box2">
-      Self-Employed : <input type="text" name="f" class="inpt" placeholder="Yes Or No" required="required" />
-      Applicant Income : <input type="text" name="e" class="inpt" placeholder=" $" required="required" /></div>
+      <label for="selfemp">Self Employed : </label>
+  <select name="selfemp" id="credit histo">
+    <option value="yes">Yes </option>
+    <option value="no">No</option>
+    
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Applicant Income : <input type="text" name="e" class="inpt" placeholder=" $" required="required" /></div>
     <div class="box3">
       Co-Applicant Income : <input type="text" name="d" class="inpt" placeholder="$" required="required" />
-      Loan Term : <input type="text" name="c" class="inpt" placeholder="Years X 12" required="required" /></div>
+      <label for="loan term">Loan Term : </label>
+  <select name="loan term" id="loan term">
+    <option value="12">1 year</option>
+    <option value="24">2 years</option>
+    <option value="60">5 years</option>
+    <option value="120">10 years</option>
+    <option value="360">30 years</option>
+  </select>
     <div class="box3">
-      Credit History : <input type="text" name="b" class="inpt" placeholder="0 or 1" required="required" />
+      <label for="credit histo">Credit History : </label>
+  <select name="credit histo" id="credit histo">
+    <option value="0">Not Conflicting </option>
+    <option value="1">Conflicting</option>
+    
+  </select>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;
-      Property : <input type="text" name="a" class="inpt" placeholder="Rural or Urban" required="required" /></div>
-               
+      <label for="prop">Property : </label>
+  <select name="prop" id="prop">
+    <option value="rural">Rural </option>
+    <option value="semiurban">Semiurban</option>
+    <option value="urban">Urban</option>
+  </select>    
         <button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Predict</button>
     </form>
   </div>
