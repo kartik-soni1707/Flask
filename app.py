@@ -23,10 +23,12 @@ def predict():
     for x in request.form.values():
         if x.isdigit():
             x=int(x)
+        
         ans.append(x)
     value=ans
+
     value[0]=(value[0].lower()=='male')
-    value[1]=(value[1].lower()=='yes')
+    value[1]=(value[1].lower()=='yes')    
     value[3]=(value[3].lower()=='not graduate')
     value[4]=(value[4].lower()=='yes')
     if(value[-1].lower()=='urban'):
@@ -39,8 +41,8 @@ def predict():
     res=classifier.predict([value,])
 
     output  = int(res[0][0])
-
-    return render_template('index.html', prediction_text='Loan Eligible $ {}'.format(output))
+    output="Eligible loan amount($) : "+ str(output)
+    return render_template('index.html', prediction_text=output)
 
 
 if __name__ == "__main__":

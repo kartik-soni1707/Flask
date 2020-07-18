@@ -4,10 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Loan Predicor</title>
-  <link rel="icon" type="image/png" href="/ico.png"/>
-
-
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
 
   
@@ -35,15 +32,86 @@
 background: linear-gradient(90deg, rgba(213,174,238,1) 0%, rgba(148,233,193,1) 100%);
     }
     .login{
+      
       border:7px solid white;
       border-top:none;
-      height:500px;
+      height:550px;
       width:600px;
       margin: auto;
       border-bottom-right-radius:35px ;
       border-bottom-left-radius:35px ;
 
     }
+    .gendr{
+      
+      
+      border-radius: 30px;
+      padding: 5px;
+      border-radius: 50px;
+      border: 2px solid red;
+      width: 350px;
+      margin: auto;
+      margin-bottom:20px;
+      text-align: center;
+      font-size: 30px;
+    }
+    .top{
+      font-size: 20px;   
+      width: 274px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    .box1{
+      margin-top: 10px;
+      margin-left: 100px;
+      margin-bottom: 10px;
+    }
+    .box2{
+      margin-top: 10px;
+      margin-left: 100px;
+      margin-bottom: 10px;
+    }
+    .box3{
+      margin-top: 10px;
+      margin-left: 100px;
+      margin-bottom: 10px;
+    }
+    .box4{
+      margin-top: 10px;
+      margin-left: 100px;
+      margin-bottom: 20px;
+    }
+    input{
+      font-size: 15px;
+      padding: 5px;
+      border-radius: 30px;
+      text-align: center;
+    }
+    button{
+      margin-top: 10px;
+      height: 40px;
+      width: 100px;
+      text-align: center;
+      margin-left: 252px;
+      border: 5px solid red;
+      border-radius: 50px;
+    }
+    *:focus { outline: 0 !important;
+    border: black 5px solid;
+    }
+    .ans{
+      width: 500px;
+      margin: auto;
+      margin-top: 0px;
+      border-radius: 30px;
+      color: red;
+      background-color: black;
+      font-size: 25px;
+      text-align: center;
+    }
+    
+    
+
   </style>
 </head>
 
@@ -53,25 +121,36 @@ background: linear-gradient(90deg, rgba(213,174,238,1) 0%, rgba(148,233,193,1) 1
     <div class="content">
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Gender" required="required" />
-        <input type="text" name="test_score" placeholder="Married" required="required" />
+    <div class="top">
+     Gender : <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label><input type="radio" id="female"      name="gender" value="female" required="required">
+     <label for="female">Female</label><br><br>
+     Married : <input type="radio" id="yes" name="married" value="Yes"><label for="yes">Yes</label><input type="radio" id="no"      name="married" value="no" required="required">
+     <label for="no">No</label><br>    
+    </div>
+     <div class="box1">
     <input type="text" name="interview_score" placeholder="Dependents" required="required" />
-    <input type="text" name="g" placeholder="Education" required="required" />
-		<input type="text" name="f" placeholder="Self-Employed" required="required" />
-		<input type="text" name="e" placeholder="Applicant Income" required="required" />
+    <input type="text" name="g" placeholder="Education" required="required" /></div> 
+    <div class="box2">
+    <input type="text" name="f" placeholder="Self-Employed" required="required" />
+    <input type="text" name="e" placeholder="Applicant Income" required="required" /></div>
+    <div class="box3">
 		<input type="text" name="d" placeholder="Co-Applicant Income" required="required" />
-		<input type="text" name="c" placeholder="Loan Term" required="required" />
-		<input type="text" name="b" placeholder="Credit History" required="required" />
-		<input type="text" name="a" placeholder="Property" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+		<input type="text" name="c" placeholder="Loan Term" required="required" /></div>
+    <div class="box3">
+    <input type="text" name="b" placeholder="Credit History" required="required" />
+		<input type="text" name="a" placeholder="Property" required="required" /></div>
+               
+        <button type="submit" class="w3-button w3-white w3-border w3-border-red w3-round-large">Predict</button>
     </form>
   </div>
    <br>
    <br>
+   <div class="ans">
    {{ prediction_text }}
-
+  </div>
  </div>
 
 
 </body>
+
 </html>
