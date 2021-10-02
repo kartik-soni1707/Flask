@@ -37,7 +37,7 @@ def predict():
         value[-1]=1
     else:
         value[-1]=0
-    output+=str(value[-1])
+    
     value=array(value, dtype=np.float64)
     res=classifier.predict([value,])
      
