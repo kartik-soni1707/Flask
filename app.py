@@ -41,7 +41,7 @@ def predict():
     res=classifier.predict([value,])
 
     output  = int(res[0][0])
-    output="Eligible loan amount($) : "+ str(output)
+    output="Eligible loan amount($$$) : "+ str(output)
     return render_template('index.html', prediction_text=output)
 
 
