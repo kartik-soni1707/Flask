@@ -37,11 +37,12 @@ def predict():
         value[-1]=1
     else:
         value[-1]=0
+    output+=str(value)
     value=array(value, dtype=np.float64)
     res=classifier.predict([value,])
-
+     
     output  = int(res[0][0])
-    output="Eligible loan amount($) : "+ str(output)+str(value)
+    output="Eligible loan amount($) : "+ str(output)
     return render_template('index.html', prediction_text=output)
 
 
